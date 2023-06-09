@@ -262,7 +262,7 @@ Resources:
       IdentitySource: method.request.header.Authorization
       IdentityValidationExpression: ^[Bb]earer [A-Za-z0-9-_=]+\.[A-Za-z0-9-_=]+\.?[A-Za-z0-9-_.+/=]*$
       AuthorizerUri: !Sub arn:${AWS::Partition}:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/${AuthorizerLambda.Arn}/invocations
- MetricsServiceResource:
+  MetricsServiceResource:
     Type: AWS::ApiGateway::Resource
     Properties:
       RestApiId: !Ref PublicApi
